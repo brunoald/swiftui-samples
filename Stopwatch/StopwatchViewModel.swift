@@ -3,21 +3,27 @@ import Combine
 
 final class StopwatchViewModel: ObservableObject {
 
+    // MARK: - Public attributes
+
     @Published
     var counterValue: String = ""
-
-    var timer = Timer.publish(every: 1, tolerance: .none, on: RunLoop.main, in: .default)
 
     @Published
     var isPlaying = false
 
-    var secondsCount: Int = 0 {
+    // MARK: - Private attributes
+
+    private var timer = Timer.publish(every: 1, tolerance: .none, on: RunLoop.main, in: .default)
+
+    private var secondsCount: Int = 0 {
         didSet {
             counterValue = "\(secondsCount)"
         }
     }
 
-    var cancellable: AnyCancellable? = nil
+    private var cancellable: AnyCancellable?
+
+    // MARK: - Init
 
     init() {
         cancellable = timer.sink { _ in
@@ -25,8 +31,10 @@ final class StopwatchViewModel: ObservableObject {
                 self.secondsCount += 1
             }
         }
-        timer.connect()
+        _ = timer.connect()
     }
+
+    // MARK: - Public methods
 
     func play() {
         isPlaying = true

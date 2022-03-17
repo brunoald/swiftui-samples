@@ -4,9 +4,6 @@ struct StopwatchView: View {
     @StateObject
     var viewModel = StopwatchViewModel()
 
-    @State
-    var counterValue: String = "00:00"
-
     var body: some View {
         VStack {
             counter
@@ -19,26 +16,38 @@ struct StopwatchView: View {
             .font(.system(size: 120, weight: .black, design: .default))
     }
 
+    private var playButton: some View {
+        Button(action: {
+            viewModel.play()
+        }, label: {
+            Image(systemName: "play.circle.fill")
+        })
+    }
+
+    private var pauseButton: some View {
+        Button(action: {
+            viewModel.pause()
+        }, label: {
+            Image(systemName: "pause.circle.fill")
+        })
+    }
+
+    private var resetButton: some View {
+        Button(action: {
+            viewModel.reset()
+        }, label: {
+            Image(systemName: "arrow.counterclockwise.circle.fill")
+        })
+    }
+
     private var buttons: some View {
         HStack {
             if viewModel.isPlaying {
-                Button(action: {
-                    viewModel.pause()
-                }, label: {
-                    Image(systemName: "pause.circle.fill")
-                })
+                pauseButton
             } else {
-                Button(action: {
-                    viewModel.play()
-                }, label: {
-                    Image(systemName: "play.circle.fill")
-                })
+                playButton
             }
-            Button(action: {
-                viewModel.reset()
-            }, label: {
-                Image(systemName: "arrow.counterclockwise.circle.fill")
-            })
+            resetButton
         }
         .font(.system(size: 60))
         .foregroundColor(Color.red)

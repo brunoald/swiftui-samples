@@ -10,7 +10,7 @@ struct StopwatchView: View {
 
     private var counter: some View {
         Text("00:00")
-            .font(.system(size: 80, weight: .black, design: .default))
+            .font(.system(size: 120, weight: .black, design: .default))
     }
 
     private var buttons: some View {
@@ -31,13 +31,21 @@ struct StopwatchView: View {
                 Image(systemName: "arrow.counterclockwise.circle.fill")
             })
         }
-        .font(.system(size: 30))
+        .font(.system(size: 60))
         .foregroundColor(Color.red)
     }
 }
 
 struct StopwatchView_Previews: PreviewProvider {
     static var previews: some View {
-        StopwatchView().previewInterfaceOrientation(.landscapeLeft)
+        StopwatchView()
+            .previewInterfaceOrientation(.landscapeLeft)
+            .preferredColorScheme(.dark)
+            .previewDevice("iPhone 12 mini")
+
+        StopwatchView()
+            .previewInterfaceOrientation(.landscapeLeft)
+            .preferredColorScheme(.light)
+            .previewDevice("iPhone 11")
     }
 }

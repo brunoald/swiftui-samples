@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		60B8493D27C5489200B1BDCC /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8493C27C5489200B1BDCC /* GradientButton.swift */; };
+		60D748C627E3CD4D00DE384F /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D748C527E3CD4D00DE384F /* StopwatchView.swift */; };
+		60D748C927E3CFE000DE384F /* StopwatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D748C827E3CFE000DE384F /* StopwatchViewModel.swift */; };
 		60D8E9B627D15DFB00DE7451 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8E9B527D15DFB00DE7451 /* UserAvatar.swift */; };
 		60E9B3E427C2DCFE00D2FBF0 /* SwiftUISamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E9B3D427C2DCFC00D2FBF0 /* SwiftUISamplesApp.swift */; };
 		60E9B3E627C2DCFE00D2FBF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E9B3D527C2DCFC00D2FBF0 /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		60B8493C27C5489200B1BDCC /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		60D748C527E3CD4D00DE384F /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		60D748C827E3CFE000DE384F /* StopwatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewModel.swift; sourceTree = "<group>"; };
 		60D8E9B527D15DFB00DE7451 /* UserAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
 		60E9B3D427C2DCFC00D2FBF0 /* SwiftUISamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISamplesApp.swift; sourceTree = "<group>"; };
 		60E9B3D527C2DCFC00D2FBF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,9 +40,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60D748C727E3CFCD00DE384F /* Stopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				60D748C527E3CD4D00DE384F /* StopwatchView.swift */,
+				60D748C827E3CFE000DE384F /* StopwatchViewModel.swift */,
+			);
+			path = Stopwatch;
+			sourceTree = "<group>";
+		};
 		60E9B3CE27C2DCFB00D2FBF0 = {
 			isa = PBXGroup;
 			children = (
+				60D748C727E3CFCD00DE384F /* Stopwatch */,
 				60D8E9B527D15DFB00DE7451 /* UserAvatar.swift */,
 				60B8493C27C5489200B1BDCC /* GradientButton.swift */,
 				60E9B3F227C2E5D300D2FBF0 /* DSButton.swift */,
@@ -128,9 +142,11 @@
 			files = (
 				60E9B3E627C2DCFE00D2FBF0 /* ContentView.swift in Sources */,
 				60B8493D27C5489200B1BDCC /* GradientButton.swift in Sources */,
+				60D748C627E3CD4D00DE384F /* StopwatchView.swift in Sources */,
 				60E9B3F327C2E5D300D2FBF0 /* DSButton.swift in Sources */,
 				60D8E9B627D15DFB00DE7451 /* UserAvatar.swift in Sources */,
 				60E9B3E427C2DCFE00D2FBF0 /* SwiftUISamplesApp.swift in Sources */,
+				60D748C927E3CFE000DE384F /* StopwatchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

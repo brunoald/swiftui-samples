@@ -12,16 +12,22 @@ struct CircleAnimation: View {
     var body: some View {
         ScrollView {
             VStack {
-                Circle()
-                    .trim(from: 0, to: trim)
-                    .rotation(.degrees(-90))
-                    .stroke(lineColor, style: strokeStyle)
-                    .frame(width: size, height: size)
-                    .padding()
+                ZStack {
+                    Circle()
+                        .trim(from: 0, to: trim)
+                        .rotation(.degrees(-90))
+                        .stroke(lineColor, style: strokeStyle)
+                        .frame(width: size, height: size)
+                        .padding()
+                    Text("\(size.formatted())")
+                        .font(.system(size: size / 5))
+                        .bold()
+                        .background(.red)
+                }
                 Slider(
                     value: $size,
                     in: 50...300,
-                    step: 1
+                    step: 15
                 ).frame(width: 150)
                 Text("Size: (\(size.formatted()))").font(.headline)
 
@@ -30,7 +36,7 @@ struct CircleAnimation: View {
                     in: 0...1,
                     step: 0.01
                 )
-                .accentColor(.red)
+                .accentColor(trim > 0.5 ? .orange : .blue)
                 .frame(width: 150)
 
                 Text("Trim: (\(trim.formatted()))").font(.headline)
@@ -57,7 +63,12 @@ struct CircleAnimation: View {
                 )
                 ColorPicker("Line color", selection: $lineColor)
             }
-            .animation(.default, value: size)
+            .animation(
+                .spring(
+                    response: 1.5,
+                    dampingFraction: 0.5,
+                    blendDuration: 0.5
+                ), value: size)
             .animation(.spring(), value: trim)
             .animation(.easeIn(duration: 0.1), value: lineWidth)
             .padding()

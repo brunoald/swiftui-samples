@@ -46,7 +46,7 @@ struct Movie: Codable {
 }
 
 struct MoviesAPI {
-    private let apiKey = ""
+    private let apiKey = "" // TODO: Adicione aqui a sua API KEY
     func getMovies(completion: @escaping (Result<MoviesResponse, Error>) -> Void) {
         let urlString = "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)&language=pt-BR"
         guard let url = URL(string: urlString) else { fatalError("Missing URL") }

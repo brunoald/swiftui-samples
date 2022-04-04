@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		600B7C9D27ECB47B00D7495E /* CircleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B7C9C27ECB47B00D7495E /* CircleAnimation.swift */; };
+		602D24ED27FB5C810050E898 /* ScoreCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602D24EC27FB5C810050E898 /* ScoreCircle.swift */; };
 		6069992E27F1FF1C005BE070 /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6069992D27F1FF1C005BE070 /* MoviesAPI.swift */; };
 		6069993027F20103005BE070 /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6069992F27F20103005BE070 /* MoviesListView.swift */; };
 		60B8493D27C5489200B1BDCC /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8493C27C5489200B1BDCC /* GradientButton.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		600B7C9C27ECB47B00D7495E /* CircleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimation.swift; sourceTree = "<group>"; };
+		602D24EC27FB5C810050E898 /* ScoreCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCircle.swift; sourceTree = "<group>"; };
 		6069992D27F1FF1C005BE070 /* MoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
 		6069992F27F20103005BE070 /* MoviesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
 		60B8493C27C5489200B1BDCC /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			children = (
 				6069992D27F1FF1C005BE070 /* MoviesAPI.swift */,
 				6069992F27F20103005BE070 /* MoviesListView.swift */,
+				602D24EC27FB5C810050E898 /* ScoreCircle.swift */,
 			);
 			path = MovieDB;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				60D8E9B627D15DFB00DE7451 /* UserAvatar.swift in Sources */,
 				60E9B3E427C2DCFE00D2FBF0 /* SwiftUISamplesApp.swift in Sources */,
 				60D748C927E3CFE000DE384F /* StopwatchViewModel.swift in Sources */,
+				602D24ED27FB5C810050E898 /* ScoreCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

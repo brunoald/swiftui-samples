@@ -33,6 +33,7 @@ struct MovieView: View {
     let title: String
     let posterUrl: String
     let date: String
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             ZStack(alignment: .bottomLeading) {
@@ -51,17 +52,7 @@ struct MovieView: View {
                 .frame(width: 150, height: 200)
                 .clipped()
                 .cornerRadius(10)
-                ZStack {
-                    Circle()
-                        .fill(.black)
-                        .frame(width: 40, height: 40)
-                    Text("70%")
-                        .font(
-                            .system(size: 11, weight: .bold)
-                        )
-                        .foregroundColor(.white)
-                }
-                .offset(x: 15, y: 20)
+                // TODO: Adicionar um ScoreCircle
             }
 
             Text(title)

@@ -7,12 +7,13 @@ struct MoviesList: View {
 
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(alignment: .top) {
+            HStack(alignment: .top, spacing: 16) {
                 ForEach(movies, id: \.id) { movie in
                     MovieView(
                         title: movie.title,
                         posterUrl: movie.posterPath,
-                        date: "March 11, 2022"
+                        date: "March 11, 2022",
+                        score: Int(movie.voteAverage*10)
                     )
                 }
             }
@@ -33,6 +34,7 @@ struct MovieView: View {
     let title: String
     let posterUrl: String
     let date: String
+    let score: Int
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -49,10 +51,11 @@ struct MovieView: View {
                         Color.blue // Acts as a placeholder.
                     }
                 }
-                .frame(width: 150, height: 200)
+                .frame(width: 150, height: 220)
                 .clipped()
                 .cornerRadius(10)
-                // TODO: Adicionar um ScoreCircle
+                ScoreCircle(score: score)
+                    .offset(x:10,y:15)
             }
 
             Text(title)

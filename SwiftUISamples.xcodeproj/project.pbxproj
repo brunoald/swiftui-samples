@@ -14,6 +14,7 @@
 		6069992E27F1FF1C005BE070 /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6069992D27F1FF1C005BE070 /* MoviesAPI.swift */; };
 		6069993027F20103005BE070 /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6069992F27F20103005BE070 /* MoviesListView.swift */; };
 		60B8493D27C5489200B1BDCC /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8493C27C5489200B1BDCC /* GradientButton.swift */; };
+		60BDDFD32816E796009DD54E /* CombineSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BDDFD22816E796009DD54E /* CombineSamples.swift */; };
 		60D748C627E3CD4D00DE384F /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D748C527E3CD4D00DE384F /* StopwatchView.swift */; };
 		60D748C927E3CFE000DE384F /* StopwatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D748C827E3CFE000DE384F /* StopwatchViewModel.swift */; };
 		60D8E9B627D15DFB00DE7451 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8E9B527D15DFB00DE7451 /* UserAvatar.swift */; };
@@ -31,6 +32,7 @@
 		6069992D27F1FF1C005BE070 /* MoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
 		6069992F27F20103005BE070 /* MoviesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
 		60B8493C27C5489200B1BDCC /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		60BDDFD22816E796009DD54E /* CombineSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineSamples.swift; sourceTree = "<group>"; };
 		60D748C527E3CD4D00DE384F /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		60D748C827E3CFE000DE384F /* StopwatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewModel.swift; sourceTree = "<group>"; };
 		60D8E9B527D15DFB00DE7451 /* UserAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = MovieDB;
 			sourceTree = "<group>";
 		};
+		60BDDFD12816E784009DD54E /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				60BDDFD22816E796009DD54E /* CombineSamples.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
 		60D748C727E3CFCD00DE384F /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		60E9B3CE27C2DCFB00D2FBF0 = {
 			isa = PBXGroup;
 			children = (
+				60BDDFD12816E784009DD54E /* Combine */,
 				603A90212800A6DB00028F35 /* Navigation */,
 				6069992C27F1FF0B005BE070 /* MovieDB */,
 				600B7C9C27ECB47B00D7495E /* CircleAnimation.swift */,
@@ -185,6 +196,7 @@
 				60D8E9B627D15DFB00DE7451 /* UserAvatar.swift in Sources */,
 				603A90232800A6FB00028F35 /* NavigationViewSamples.swift in Sources */,
 				60E9B3E427C2DCFE00D2FBF0 /* SwiftUISamplesApp.swift in Sources */,
+				60BDDFD32816E796009DD54E /* CombineSamples.swift in Sources */,
 				60D748C927E3CFE000DE384F /* StopwatchViewModel.swift in Sources */,
 				602D24ED27FB5C810050E898 /* ScoreCircle.swift in Sources */,
 			);

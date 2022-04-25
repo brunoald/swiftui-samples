@@ -1,27 +1,40 @@
 import SwiftUI
 
 struct NavigationExercise: View {
+    @State private var navigationTag: String?
+
     var body: some View {
         NavigationView {
             VStack {
                 NavigationLink(
-                    "Tela de Detalhes 1",
-                    destination: DetailsView(texto: "Minha view 1")
-                )
-                NavigationLink(
-                    "Tela de Detalhes 2",
-                    destination: DetailsView(texto: "Minha view 2")
-                )
-                NavigationLink(
-                    "Tela de Detalhes 3",
-                    destination: DetailsView(texto: "Minha view 3")
-                )
-                NavigationLink(
-                    destination: DetailsView(texto: "Tela 5")) {
-                        Image(systemName: "swift")
-                            .font(.largeTitle)
+                    "Tag A",
+                    tag: "A",
+                    selection: $navigationTag,
+                    destination: {
+                        DetailsView(texto: "View A")
                     }
-            }.navigationTitle("Navegação")
+                )
+                NavigationLink(
+                    "Tag B",
+                    tag: "B",
+                    selection: $navigationTag,
+                    destination: {
+                        DetailsView(texto: "View B")
+                    }
+                )
+                NavigationLink(
+                    "Tag C",
+                    tag: "C",
+                    selection: $navigationTag,
+                    destination: {
+                        DetailsView(texto: "View C")
+                    }
+                )
+            }
+            .onAppear {
+                navigationTag = "A"
+            }
+            .navigationTitle("Navegação")
         }
     }
 }
